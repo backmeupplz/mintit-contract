@@ -1,6 +1,6 @@
 {
   "name": "mintit-contract",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Farcaster MintIt contract",
   "repository": {
     "type": "git",
