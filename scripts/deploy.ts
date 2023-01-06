@@ -18,14 +18,20 @@ async function main() {
     3: 'ropsten',
     4: 'rinkeby',
     5: 'goerli',
+    137: 'polygon',
+    80001: 'mumbai',
   } as { [chainId: number]: string }
   const chainName = chains[chainId]
 
-  const contractName = 'MyERC721'
-  const contractSymbol = 'MYERC721'
+  const contractName = 'Casts'
+  const contractSymbol = 'CSTS'
   console.log(`Deploying ${contractName}...`)
   const Contract = await ethers.getContractFactory(contractName)
-  const contract = await Contract.deploy(contractName, contractSymbol)
+  const contract = await Contract.deploy(
+    contractName,
+    contractSymbol,
+    'https://mintit.boats/metadata/'
+  )
 
   console.log(
     'Deploy tx gas price:',

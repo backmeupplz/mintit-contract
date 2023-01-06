@@ -1,10 +1,8 @@
-# Solidity Ethereum smart contract starter
-
-Heavily influenced by the [Big Whale Labs repos](https://github.com/BigWhaleLabs).
+# Farcaster MintIt casts ledger
 
 ## Usage
 
-1. Clone the repository with `git clone git@github.com:Borodutch/smart-contract-starter`
+1. Clone the repository with `git clone git@github.com:backmeupplz/mintit-contract`
 2. Install the dependencies with `yarn`
 3. Add environment variables to your `.env` file
 4. Run the scripts below
