@@ -20,6 +20,7 @@ contract Casts is ERC721, Ownable {
   }
 
   function mint(uint256 tokenId, address to) external {
+    require(_ownerOf(tokenId) == address(0), "Token already minted");
     _safeMint(to, tokenId);
   }
 
