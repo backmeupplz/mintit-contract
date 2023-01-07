@@ -25,13 +25,10 @@ async function main() {
 
   const contractName = 'Casts'
   const contractSymbol = 'CSTS'
+  const baseUri = 'https://mintit.boats/metadata/'
   console.log(`Deploying ${contractName}...`)
   const Contract = await ethers.getContractFactory(contractName)
-  const contract = await Contract.deploy(
-    contractName,
-    contractSymbol,
-    'https://mintit.boats/metadata/'
-  )
+  const contract = await Contract.deploy(contractName, contractSymbol, baseUri)
 
   console.log(
     'Deploy tx gas price:',
@@ -53,7 +50,7 @@ async function main() {
   try {
     await run('verify:verify', {
       address,
-      constructorArguments: [contractName, contractSymbol],
+      constructorArguments: [contractName, contractSymbol, baseUri],
     })
   } catch (err) {
     console.log(
